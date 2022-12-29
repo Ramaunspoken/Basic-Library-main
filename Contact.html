@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+<section class="header">
+    <nav>
+        <a href="index.html"><img src="images/bl_logo-removebg-preview.png"></a>
+        <div class="nav-links" id="navLinks">
+            <ul class="mobile_nav_items">
+                <span class="toggle-cross" onclick="hidemenu()">X</span>
+                <li><a href="">SIGNIN</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">BOOKS</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <span class="toggle-cross" onclick="showmenu()">=</span>
+
+        <div class="text-box">
+            <h1>Basic Library</h1>
+            <p>
+                You know our goal at Basic Library is to help you spend less time
+                searching for books so you can spend more time reading!<br> That’s why
+                we’ve compiled a list of the 100 best quotes about reading. 
+                Read on to see<br> the many insightful, witty, and motivating things
+                that have been said about reading by authors, poets,<br> scientists,
+                    artists, visionaries and even comedians.
+            </p>
+            <a href="" class="hero-btn">Email Us</a>
+        </div>
+    </nav>
+</section>
+
+    <div class="hero">
+        <h3>Contact Us,</h3>
+        <h1>Our Services and<br>Offices are Opened 23/7.</h1>
+        <p>Email us for more Informations.</p>
+        <form name="submit-to-google-sheet">
+            <input type="email" class="Email" placeholder="Your email id" required>
+            <button type="submit"><img src="images/icons8-email-send-30.png" width="30px"></button>
+        </form>
+        <span id="msg"></span>
+    </div>
+
+    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyOop45HsnWdoconNaMl7en3OAgk4-dfi3ZB7m2PvDEJwRJwkr15LAboSEk_immEluO5g/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const mgs = document.getElementById("msg")
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Thanks for Visiting!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+
+    var navLinks = document.getElementById("navLinks");
+
+    function showmenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hidemenu(){
+        navLinks.style.right = "-200px";
+    }
+    </script>
+</body>
+</html>
