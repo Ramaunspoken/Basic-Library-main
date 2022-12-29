@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600
+;700&family=Zen+Dots&display=swap" rel="stylesheet">
+    <title>Basic Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="icon" type="image/x-icon" href="./images/web_logo-removebg-preview.png">
+</head>
+<body>
+
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/bl_logo-removebg-preview.png"></a>
+            <div class="nav-links" id="navLinks">
+                <ul class="mobile_nav_items">
+                    <span class="toggle-cross" onclick="hidemenu()">X</span>
+                    <li><a href="">SIGNIN</a></li>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">BOOKS</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <span class="toggle-cross" onclick="showmenu()">=</span>
+
+        </nav>
+
+        <div class="text-box">
+            <h1>Basic Library</h1>
+            <p>
+                You know our goal at Basic Library is to help you spend less time
+                searching for books so you can spend more time reading!<br> That’s why
+                we’ve compiled a list of the 100 best quotes about reading. 
+                Read on to see<br> the many insightful, witty, and motivating things
+                that have been said about reading by authors, poets,<br> scientists,
+                    artists, visionaries and even comedians.
+            </p>
+            <a href="" class="hero-btn">Visit Us</a>
+        </div>
+    </section>
+<!-----Levels---->
+<section class="course">
+    <h1>Level's We Offer</h1>
+    <p>To know a man’s library is, in some measure, to know a man’s mind.
+        Books serve to show a man that those original thoughts of his aren’t very new after all.</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Tacit Readers</h3>
+                <p>Books serve to show a man that those original 
+                    thoughts of his aren’t very new after all.</p>
+            </div>
+            <div class="course-col">
+                <h3>Strategic Readers</h3>
+                <p>Books serve to show a man that those original 
+                    thoughts of his aren’t very new after all.</p>
+            </div>
+            <div class="course-col">
+                <h3>Reflective Readers</h3>
+                <p>Books serve to show a man that those original 
+                    thoughts of his aren’t very new after all.</p>
+            </div>
+        </div>
+</section>
+<!----Books-->
+<section class="campus">
+    <h1>Our Books</h1>
+    <p>Once upon a time’ is one of the most magical phrases you’ll ever read.</p>
+
+    <div class="row">
+        <div class="campus-col">
+            <img src="images/1_OppuDnyxcz3dupRiKOEzMA.webp" alt="">
+            <div class="layer">
+                <h3> Refactoring, Improving the design of existing code</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="images/Narnia2.jpg" alt="">
+            <div class="layer">
+                <h3>Narnia</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="images/unit testing.webp" alt="">
+            <div class="layer">
+                <h3>The Art of Unit Testing</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<!----Places---->
+<section class="facilities">
+    <h1>Our Facilities</h1>
+    <p>Our facilities are located in and outside Kenya.</p>
+
+    <div class="row">
+        <div class="facilities-col">
+            <img src="images/pexels-taryn-elliott-4390730.jpg">
+            <h3>Wide space</h3>
+            <p>A book is a version of the world. If you do not like it, ignore it; or offer your own version in return.</p>
+        </div>
+        <div class="facilities-col">
+            <img src="images/pexels-fer-valladares-12252547.jpg">
+            <h3>yard</h3>
+            <p>A book is a version of the world. If you do not like it, ignore it; or offer your own version in return.</p>
+        </div>
+        <div class="facilities-col">
+            <img src="images/pexels-yx-b-13224271.jpg">
+            <h3>Cafe</h3>
+            <p>A book is a version of the world. If you do not like it, ignore it; or offer your own version in return.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-----Javascript toggle------>
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showmenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hidemenu(){
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>
